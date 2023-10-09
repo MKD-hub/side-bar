@@ -14,12 +14,85 @@ body{
 
 }
 
+
+
+.back-icon {
+  padding: 20px;
+  border-radius: 50%;
+  outline: 1px solid green;
+  background-color: transparent;
+  transition: .5s;
+}
+
+.back-icon:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+}
+
+.alfursan-content, .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 4000;
+  width: 300px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  animation: slideDown 0.3s ease-out forwards;
+  
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.show-dropdown {
+  display: block;
+}
+
+.show-dropdown::after {
+  margin-bottom: 30px;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
 .nav_list {
   display: flex;
+}
+
+.plane-nav-list {
+  display: none;
+}
+
+.plane-nav-list.show {
+  display: block;
+}
+
+.alfursan-nav-list {
+  display: none;
+}
+
+.alfursan-nav-list.show {
+  display: block;
 }
 
 .sidebar {
@@ -46,6 +119,9 @@ body{
   border-top-right-radius: 15px;
   align-items: center;
   background: green;
+  position: sticky;
+  top: 0;
+  z-index: 5000;
 }
 
 .sidebar .logo #logo_img{
@@ -111,6 +187,12 @@ ul li a,
   
 }
 
+ul li span {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 ul li a i,
 .logout a i{
   position: relative;
@@ -129,6 +211,17 @@ ul li a img {
   z-index: 10;
 }
 
+.sidebar .alfursan-nav-list {
+  transform: translateX(-250px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.sidebar .alfursan-nav-list.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .sidebar ul li a .links_name,
 .sidebar .logout a .links_name{
   color: #575F66;
@@ -145,6 +238,8 @@ ul li a img {
   transition: .5s;
   font-size: 14px;
 }
+
+
 
 .links_name p {
   overflow: hidden;

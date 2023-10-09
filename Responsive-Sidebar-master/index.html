@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
    </head>
 <body>
   <div class="sidebar">
@@ -27,21 +27,47 @@
             </span>
         </li>
 
-        <li id="Aircrats">
+        <li class="container" id="Aircrafts">
           <a href="#">
             <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-air.png">
             <span class="links_name Dropdown">Aircrafts
               <span class="image-wrapper"></span>
+              
+
             </span>
+
+            <div class="dropdown-content">
+              <span class="content-container">
+                <img src="https://www.360saudia.com/vr/endata/boeing_777_368er__z__35133/thumbnail.png">
+                <span class="links_name VR">
+                  <p>
+                    Boeing 777 368ER (Z)
+                  </p>
+                  <span class="vr-links"></span>
+                </span>
+              </span>
+            </div>
         </li>
 
-        <li id="Alfursan Lounge">
+        <li class="container" id="Alfursan">
           <a href="#">
             <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-lou.png">
-            <span class="links_name Dropdown">Alfursan Lounge
+            <span class="links_name Dropdown">Alfursan Gold Lounges
               <span class="image-wrapper"></span>
+              
             </span>
       
+            <div class="alfursan-content">
+              <span class="content-container">
+                <img src="https://www.360saudia.com/vr/endata/al_madinah_internati_33/thumbnail.png">
+                <span class="links_name VR" onclick="handleAlfursanTransition()">
+                  <p>
+                    Al-Madinah International
+                  </p>
+                  <span class="vr-links"></span>
+                </span>
+              </span>
+            </div>
         </li>
 
         <li>
@@ -124,11 +150,204 @@
 
       
     </div>
+
+    <div class="alfursan-nav-list">
+
+      <ul>
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Circulation Avenue
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Business Center
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Gents Ablution
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Gents Prayer
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Guest & Coffee Lounge
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Central Lobby
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Buffet Area
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Rest Area 1
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Rest Area 2
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Family Area
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Kids Area
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Library
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Quiet Area
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <span class="back-icon"  id="btn-back">
+            <i class='bx bx-arrow-back'></i>
+          </span>
+        </li>
+
+    </div>
+
+
+    <div class="plane-nav-list">
+      <ul>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="links_name VR">Reception
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+
+      </ul>
+    </div>
+
   </div>
 
   
 
   <script>
+
+    function click() {
+      alert("click!")
+    } 
+
     const sidebar = document.querySelector(".sidebar");
     const btn = document.querySelector("#btn");
     logo_img.onclick = function(){
@@ -148,9 +367,13 @@
       } 
     }
 
+    
+
     var x = window.matchMedia("(max-width: 700px)")
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
+
+    
   </script>
 </body>
 </html>
