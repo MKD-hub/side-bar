@@ -18,6 +18,8 @@ backbtn.addEventListener('click', function (){
     alfursanNavList.classList.remove('show');
 })
 
+
+
 dropdownButton.addEventListener('click', function () {
     dropdownContent.classList.toggle('show-dropdown');
 });
@@ -36,6 +38,10 @@ function handleAlfursanTransition() {
     alfursanNavList.classList.toggle('show');
 }
 
+function goBack() {
+    navlist.style.display = 'flex';
+    planeNavList.classList.remove('show');
+}
 
 
 
