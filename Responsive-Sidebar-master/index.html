@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://www.360saudia.com/vr/endata/graphics/button1/logo.png" alt="logo" id="logo_img">
+      
+      <i class='bx bx-menu-alt-right' id="btn" ></i>
+    </div>
+
+    <div class="nav_list">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-hom.png">
+            <span class="links_name VR">Home
+              <span class="vr-links"></span>
+            </span>
+        </li>
+
+        <li id="Aircrats">
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-air.png">
+            <span class="links_name Dropdown">Aircrafts
+              <span class="image-wrapper"></span>
+            </span>
+        </li>
+
+        <li id="Alfursan Lounge">
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-lou.png">
+            <span class="links_name Dropdown">Alfursan Lounge
+              <span class="image-wrapper"></span>
+            </span>
+      
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-awa.png">
+            <span class="links_name Info">Awards
+              <span class="info-wrapper"></span>
+            </span>
+
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-pub.png">
+            <span class="links_name Info">Publications
+              <span class="info-wrapper"></span>
+            </span>
+
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-fur.png">
+            <span class="links_name Info">Alfursan Loyalty
+              <span class="info-wrapper"></span>
+            </span>
+        
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-app.png">
+            <span class="links_name Info">Mobile Apps
+              <span class="info-wrapper"></span>
+            </span>
+        </li>
+
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-bno.png">
+            <span class="links_name Info">Book Now
+              <span class="info-wrapper"></span>
+            </span>
+        </li>
+
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-dea.png">
+            <span class="links_name Info">Extras & Deals
+              <span class="info-wrapper"></span>
+            </span>
+    
+        </li>
+
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-wif.png">
+            <span class="links_name Info">On Board Wifi Coverage
+              <span class="info-wrapper"></span>
+            </span>
+          </a>
+
+        </li>
+
+
+        <li>
+          <a href="#">
+            <img src="https://www.360saudia.com/vr/endata/graphics/alpo.sidebar-v1.0.72/t-net.png">
+            <span class="links_name Info">Mobile Network Coverage
+              <span class="info-wrapper"></span>
+            </span>
+          </a>
+  
+        </li>
+
+      </ul>
+
+      
+    </div>
+  </div>
+
+  
+
+  <script>
+    const sidebar = document.querySelector(".sidebar");
+    const btn = document.querySelector("#btn");
+    logo_img.onclick = function(){
+      if (!x.matches){
+        sidebar.classList.toggle('open');
+      }
+    }
+    btn.onclick = function(){
+      if (!x.matches){
+        sidebar.classList.remove('open');
+      }
+    }
+
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+        sidebar.classList.remove('open');
+      } 
+    }
+
+    var x = window.matchMedia("(max-width: 700px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+  </script>
+</body>
+</html>
