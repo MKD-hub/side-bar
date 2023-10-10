@@ -10,6 +10,11 @@
     <script src="script.js" defer></script>
    </head>
 <body>
+
+  <button class="drawer-nav-open-btn" id="open-btn">
+    <!-- <img src="https://www.360saudia.com/vr/endata/graphics/saudiabutton6/bs-menu2-open.png"> -->
+  </button>
+
   <div class="sidebar">
     <div class="logo">
       <img src="https://www.360saudia.com/vr/endata/graphics/button1/logo.png" alt="logo" id="logo_img">
@@ -144,6 +149,14 @@
             </span>
           </a>
   
+        </li>
+
+        <li>
+          <a href="#" target="_blank">
+            <img src="bell.png">
+            <span class="links_name Messages">Notifications
+            </span>
+          </a>
         </li>
 
       </ul>
@@ -362,6 +375,8 @@
 
     const sidebar = document.querySelector(".sidebar");
     const btn = document.querySelector("#btn");
+
+
     logo_img.onclick = function(){
       if (!x.matches){
         sidebar.classList.toggle('open');
@@ -370,14 +385,16 @@
     btn.onclick = function(){
       if (!x.matches){
         sidebar.classList.remove('open');
+        openBtn.style.width = '60px';
       }
     }
 
-    function myFunction(x) {
-      if (x.matches) { // If media query matches
-        sidebar.classList.remove('open');
-      } 
-    }
+    // function myFunction(x) {
+    //   if (x.matches) { // If media query matches
+    //     sidebar.classList.remove('open');
+        
+    //   } 
+    // }
 
     
 

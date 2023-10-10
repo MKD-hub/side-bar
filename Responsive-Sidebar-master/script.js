@@ -6,6 +6,7 @@ const dropdownContent = document.querySelector('.dropdown-content');
 
 const planeNavList = document.querySelector('.plane-nav-list');
 
+const openBtn = document.getElementById('open-btn');
 
 const navlist = document.querySelector('.nav_list');
 const alfursanNavList = document.querySelector('.alfursan-nav-list');
@@ -18,7 +19,10 @@ backbtn.addEventListener('click', function (){
     alfursanNavList.classList.remove('show');
 })
 
-
+openBtn.addEventListener('click', function() {
+    sidebar.classList.toggle('open');
+    openBtn.style.width = '0px';
+} )
 
 dropdownButton.addEventListener('click', function () {
     dropdownContent.classList.toggle('show-dropdown');
