@@ -14,6 +14,51 @@ const alfursanNavList = document.querySelector('.alfursan-nav-list');
 
 const backbtn = document.getElementById('btn-back');
 
+function openPopup(url) {
+
+    
+
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+  
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.width = '80%';
+    iframe.height = '80%';
+  
+    popup.appendChild(iframe);
+  
+    document.body.appendChild(popup);
+  
+    popup.addEventListener('click', () => {
+      popup.remove();
+    });
+  
+}
+  
+  // const links = document.querySelectorAll('.sidebar a');
+const links = document.querySelectorAll('.sidebar a:not([href="#"])');
+  
+links.forEach(link => {
+  
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const url = e.target.getAttribute('href');
+    const openedPopUp = document.querySelector('.popup');
+
+    if (document.contains(openedPopUp)) {
+      openedPopUp.remove();
+      openPopup(url);
+    }
+    else {
+      openPopup(url); 
+    }
+
+    });
+  
+});
+
+
 backbtn.addEventListener('click', function (){
     navlist.style.display = "flex";
     alfursanNavList.classList.remove('show');

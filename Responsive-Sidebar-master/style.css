@@ -34,6 +34,14 @@ body{
   transition: .4s;
 } */
 
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 .drawer-nav-open-btn {
   position: absolute;
   z-index: 200;
